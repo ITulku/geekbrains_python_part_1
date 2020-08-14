@@ -11,7 +11,11 @@
 # print(numbers_sum)
 
 ### любые целые числа ###
-user_number = input('Enter a number: ') # не переводим в int, чтобы можно было сделать конкатенацию
+user_number = input('Enter a number: ')# не переводим в int, чтобы можно было сделать конкатенацию
+# if user_number < '0':
+#     print('Enter positive integer')
+#     user_number = input('Enter a number: ') надо дописать проверку
+
 double_number = int(user_number + user_number) # конкатенируем и приводим к int
 triple_number = int(user_number + user_number + user_number) # конкатенируем и приводим к int
 numbers_sum = int(user_number) + double_number + triple_number # складываем, приводя user_number к int

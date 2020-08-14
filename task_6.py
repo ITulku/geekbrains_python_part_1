@@ -13,18 +13,18 @@
 # 6-й день: 3,22
 # Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 
-first_result = int(input('Enter first day`s result: '))
-goal = int(input('Enter a goal value: '))
-
+first_result = float(input('Enter first day`s result: '))
+goal = float(input('Enter a goal value: '))
 
 day = 1
 result = first_result
-progress_per_day = (result / 100) * 10
+progress_per_day = (result / 100) * 10 # result * 0.1
 
 while result < goal:
     if result + progress_per_day < goal:
         result = result + progress_per_day
         day += 1
+        print(result)
     else:
         day += 1
         print(f'Athlete will reach goal on {day} day.')
