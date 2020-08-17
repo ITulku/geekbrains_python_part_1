@@ -17,18 +17,26 @@ my_list = [99,70,43,43,43,21,17,17,9,3]
 
 new_number = int(input('Enter a number: '))
 
-if new_number > my_list[0]:
-    my_list.insert(0, str(new_number))
-if new_number < my_list[-1]:
-    my_list.append(str(new_number))
+# if new_number > my_list[0]:
+#     my_list.insert(0, str(new_number))
+# if new_number < my_list[-1]:
+#     my_list.append(str(new_number))
+#
+# for i in range(int(len(my_list))):
+#     if new_number == my_list[i]:
+#         j = my_list.count(my_list[i])
+#         if j > 1:
+#             my_list.insert((i + j), str(new_number))
+#             break
+#
+#
+#
+# print(my_list)
 
-for i in range(int(len(my_list))):
-    if new_number == my_list[i]:
-        j = my_list.count(my_list[i])
-        if j > 1:
-            my_list.insert((i + j), str(new_number))
-            break
-
-
+i = 0
+for n in my_list:
+    if new_number <= n:
+        i += 1
+my_list.insert(i,str(new_number))
 
 print(my_list)
